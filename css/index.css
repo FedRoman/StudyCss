@@ -1,0 +1,19 @@
+*{
+margin: 0px;
+padding:0px;
+}
+header{
+    margin: 1px;
+    padding: 20px 0 0 40px;
+}
+.wrap{
+max-width: 980px;
+background: lightsteelblue;
+margin: 0 auto;
+}
+
+.logo a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+}
