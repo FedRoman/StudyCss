@@ -1,19 +1,87 @@
-*{
-margin: 0px;
-padding:0px;
+@import url('https://fonts.googleapis.com/css?family=Germania+One|Montserrat&display=swap');
+:root{
+    --main-color:blue;
+    font-family: 'montserrat' sans-serif;
+    --secondary-color: black;
 }
-header{
-    margin: 1px;
-    padding: 20px 0 0 40px;
+body{
+    max-width: 980px;
+    margin: auto;
 }
-.wrap{
-max-width: 980px;
-background: lightsteelblue;
-margin: 0 auto;
+h1 , h2 , h3 , p , nav ,div {
+    margin: 0;
+    padding: 0;
 }
-
-.logo a{
-    font-size: 20px;
+header .logo{
+    font-family: 'germania one' , 'sans-serif';
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 10px;
+}
+header .menu{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+header .menu li{
+    display: inline;
+    list-style: none;
+}
+header .menu li a{
     text-decoration: none;
-    padding: 20px;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+header .menu li a:hover{
+    text-decoration:underline ;
+}
+@media (min-width:550px) {
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+    header nav .menu{ /* займе все вільне місце у блоку*/
+        flex: 1;
+    }
+}
+header .banner {
+    background-image: url(../images/model-x.jpg) ;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header .banner h1{
+    color: var(--secondary-color);
+    font-size: 5rem;
+    font-family: 'germania one' , 'sans-serif';
+}
+header .banner .button-container{
+    margin-top: 30px;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.button:hover{
+    background: green;
+    color: white;
 }
