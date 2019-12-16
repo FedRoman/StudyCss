@@ -6,7 +6,7 @@
 }
 body{
     max-width: 980px;
-    margin: auto;
+    margin: 0 auto;
 }
 h1 , h2 , h3 , p , nav ,div {
     margin: 0;
@@ -41,7 +41,7 @@ header .menu li a:hover{
         display: flex;
         align-items: center;
     }
-    header nav .menu{ /* займе все вільне місце у блоку*/
+    header nav .menu{ 
         flex: 1;
     }
 }
@@ -63,6 +63,19 @@ header .banner h1{
 }
 header .banner .button-container{
     margin-top: 30px;
+} .product-card{
+    border:1px solid green;
+}
+.product-card h3,
+.product-card p {
+    padding: 0 5px;
+}
+.product-card img {
+    display: block;
+    width:100%;
+}
+.product-card .button-container .button{
+    padding: 8px 32px;
 }
 .button {
     background-color: #4CAF50;
@@ -84,4 +97,25 @@ header .banner .button-container{
 .button:hover{
     background: green;
     color: white;
+}
+.product-card .button-container{
+    display: flex;
+    justify-content: space-around;
+}
+@media(min-width: 480px) {
+    .product-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+@media (min-width:660px) {
+    .product-list{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+@media (min-width:980px) {
+    .product-list{
+        grid-template-columns: repeat(4 , 1fr);
+    }
 }
